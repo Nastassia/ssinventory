@@ -1,11 +1,14 @@
+<h2>Enter new items here</h2>
 <form action="/" method="POST">
+	<input type="radio" name="type" value="machine">Machine<br />
+	<input type="radio" name="type" value="peripheral">Peripheral<br />
 	<input type="text" name="new_item" value="Enter Item" onfocus="this.value = this.value=='Enter Item'?'':this.value;" onblur="this.value = this.value==''?'Enter Item' :this.value;">
-	<input type="number" name="quantity" min="1">
+	#: <input type="number" name="quantity" min="1">
 	<input type="textarea" name="notes" value="Notes?" onfocus="this.value = this.value=='Notes?'?'':this.value;" onblur="this.value = this.value==''?'Notes?' :this.value;" />
 	<input type="submit" value="Add Item" />
 </form>
 
-<h2>Items</h2>
+<h3>Items</h3>
 <table>
 	<% Item.each do |item| %>
 	<tr>
