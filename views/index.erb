@@ -1,0 +1,17 @@
+<form action="/" method="POST">
+	<input type="text" name="new_item" value="Enter Item" onfocus="this.value = this.value=='Enter Item'?'':this.value;" onblur="this.value = this.value==''?'Enter Item' :this.value;">
+	<input type="number" name="quantity" min="1">
+	<input type="textarea" name="notes" value="Notes?" onfocus="this.value = this.value=='Notes?'?'':this.value;" onblur="this.value = this.value==''?'Notes?' :this.value;" />
+	<input type="submit" value="Add Item" />
+</form>
+
+<h2>Items</h2>
+<table>
+	<% Item.each do |item| %>
+	<tr>
+	<td><%= item.title %></td>
+	<td><%= item.quantity %></td>
+	<td><%= item.notes %></td>
+    </tr>
+	<% end %>
+</table>
