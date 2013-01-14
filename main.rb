@@ -11,6 +11,7 @@ class Item
 	property :title, String
 	property :quantity, Integer
 	property :notes, Text
+	property :type, Enum[:machine, :peripheral], :default => :peripheral
 end
 
 DataMapper.auto_upgrade!
@@ -20,7 +21,8 @@ get '/' do
 end
 
 post '/' do
-	@item = Item.new(:title => params[:new_item], :quantity => params[:quantity], :notes => params[:notes])
+	@item = Item.new(:title => params[:new_item], :quantity => params[:quantity], :notes => params[:notes], :type => params[:type])
 	@item.save
+
 	redirect to('/')
 end

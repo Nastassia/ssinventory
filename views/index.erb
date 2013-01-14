@@ -1,4 +1,4 @@
-<h2>Enter new items here</h2>
+<div id="item_form"><h2>Enter new items here</h2>
 <form action="/" method="POST">
 	<input type="radio" name="type" value="machine">Machine<br />
 	<input type="radio" name="type" value="peripheral">Peripheral<br />
@@ -7,14 +7,24 @@
 	<input type="textarea" name="notes" value="Notes?" onfocus="this.value = this.value=='Notes?'?'':this.value;" onblur="this.value = this.value==''?'Notes?' :this.value;" />
 	<input type="submit" value="Add Item" />
 </form>
+</div>
 
+<div id="inventory">
 <h3>Items</h3>
-<table>
+<table border="1">
+	<tr>
+		<th>Item</th>
+		<th>#</th>
+		<th>Notes</th>
+		<th>Type</th>
+		<tr>
 	<% Item.each do |item| %>
 	<tr>
 	<td><%= item.title %></td>
 	<td><%= item.quantity %></td>
 	<td><%= item.notes %></td>
+	<td><%= item.type %></td>
     </tr>
 	<% end %>
 </table>
+</div>
