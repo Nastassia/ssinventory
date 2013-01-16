@@ -17,6 +17,7 @@
 		<th>#</th>
 		<th>Notes</th>
 		<th>Type</th>
+		<th>Delete</th>
 		<tr>
 	<% Item.each do |item| %>
 	<tr>
@@ -24,6 +25,7 @@
 	<td><%= item.quantity %></td>
 	<td><%= item.notes %></td>
 	<td><%= item.type %></td>
+	<td><form action="/" method="POST"><input type="hidden" name="_method" value="DELETE"><input type="submit" value="&times;" title="Delete"></form></td>
     </tr>
 	<% end %>
 </table>

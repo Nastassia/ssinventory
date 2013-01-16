@@ -23,6 +23,11 @@ end
 post '/' do
 	@item = Item.new(:title => params[:new_item], :quantity => params[:quantity], :notes => params[:notes], :type => params[:type])
 	@item.save
-
 	redirect to('/')
 end
+
+delete '/' do
+	Item.get(parms[:id]).destroy
+	redirect to('/')
+end
+
