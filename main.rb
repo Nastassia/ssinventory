@@ -26,8 +26,8 @@ post '/' do
 	redirect to('/')
 end
 
-delete '/' do
-	Item.get(@item).destroy
+delete '/item/:id' do
+	Item.get(params[:id]).destroy
 	redirect to('/')
 end
 
