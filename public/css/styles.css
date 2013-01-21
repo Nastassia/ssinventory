@@ -1,9 +1,47 @@
-#wrapper {
-	width: 66%;
-	margin: auto;
+* {
+	padding: 0;
+	margin: 0;
 }
 
-#banner {
-	background-color:#E8E6E7;
-	height: 20px;
+html, body {
+	background-image:url('../images/red_dots.png');
+	padding-right: 2px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color:#4D5256;
 }
+
+#wrapper {
+	background-color: #FFF;
+	width: 75%;
+	margin: 0 auto;
+	border: 1px solid #4D5256;
+}
+
+#banner img{
+	border-top:1px solid #4D5256;
+	border-bottom: 1px dashed #4D5256;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+h1, h2 {
+	padding: 5px;
+}
+#item_form {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#inventory {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table td, table th {
+	padding: 5px;
+}
+

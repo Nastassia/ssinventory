@@ -1,5 +1,16 @@
-<div id="banner"><h1>Shutterstock Inventory</h1>
-</div>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Inventory</title>
+	<link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+<div id="wrapper">
+
+<div id="banner"><img src="images/inventoryheader.jpg" />
+</div><!-- banner -->
 
 <div id="item_form"><h2>Enter new items here</h2>
 <form action="/" method="POST">
@@ -10,10 +21,10 @@
 	<input type="textarea" name="notes" value="Notes?" onfocus="this.value = this.value=='Notes?'?'':this.value;" onblur="this.value = this.value==''?'Notes?' :this.value;" />
 	<input type="submit" value="Add Item" />
 </form>
-</div>
+</div><!-- item_form -->
 
 <div id="inventory">
-<h3>Items</h3>
+<h2>Items</h2>
 <table border="1">
 	<tr>
 		<th>Item</th>
@@ -32,4 +43,8 @@
     </tr>
 	<% end %>
 </table>
-</div>
+</div><!-- inventory -->
+
+</div><!-- wrapper -->
+</body>
+</html>
