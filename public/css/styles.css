@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
 * {
 	padding: 0;
 	margin: 0;
@@ -8,11 +10,13 @@ html, body {
 	padding-right: 2px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color:#4D5256;
+	height: 100%;
 }
 
 #wrapper {
 	background-color: #FFF;
 	width: 75%;
+	min-height: 100%;
 	margin: 0 auto;
 	border: 1px solid #4D5256;
 }
@@ -25,7 +29,19 @@ html, body {
 }
 
 h1, h2 {
+	font-family: 'Droid Sans', sans-serif;
 	padding: 5px;
+}
+
+h1 {
+	text-align: center;
+	border-bottom: 1px solid #121212;
+	padding: 30px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 4em;
+	color: #E02D2D;
+	font-weight: bold;
 }
 #item_form {
 	margin: 0 auto;
@@ -45,3 +61,10 @@ table td, table th {
 	padding: 5px;
 }
 
+input {
+	margin-top: 10px;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
